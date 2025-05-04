@@ -1,0 +1,17 @@
+<table border="2">
+    <tr>
+        <th>URL Larga</th>
+        <th>URL Corta</th>
+        <th>Navegar</th>
+    </tr>
+
+    @for(url of urls; track $index){
+    <tr>
+        <td>{{ url.url_larga }}</td>
+        <td>{{ url.url_corta }}</td>
+        <td>
+            <button (click)="navigate(url.url_corta)">Ir</button>
+        </td>
+    </tr>
+    }
+</table>
